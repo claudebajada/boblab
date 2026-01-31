@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Quark the Duck",
+    "fact": "Keeps the lab notebook quacking with new ideas.",
+    "image": "/assets/duck-1.svg"
+  },
+  {
+    "name": "Pipette Pal",
+    "fact": "Legend says it calibrates pipettes at sunrise.",
+    "image": "/assets/duck-2.svg"
+  },
+  {
+    "name": "Captain Waddle",
+    "fact": "Our unofficial morale officer during late-night experiments.",
+    "image": "/assets/duck-3.svg"
+  }
+]
