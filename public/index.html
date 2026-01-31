@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BobLab — Bioelectric & Regenerative Systems</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header class="site-header">
+        <nav class="nav">
+          <div class="nav__brand">
+            <img src="/assets/boblab-logo.svg" alt="BobLab logo" />
+          </div>
+          <div class="nav__links">
+            <a href="#mission">Mission</a>
+            <a href="#people">People</a>
+            <a href="#updates">Updates</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <button class="nav__cta">Join our lab</button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero__content">
+            <p class="eyebrow">Bioelectric systems • Regenerative design</p>
+            <h1>We build living interfaces that help tissue heal, adapt, and thrive.</h1>
+            <p class="lead">
+              BobLab combines bioengineering, computational modeling, and soft robotics to create
+              programmable microenvironments for regenerative medicine.
+            </p>
+            <div class="hero__actions">
+              <button class="primary">See our research</button>
+              <button class="ghost">Meet the team</button>
+            </div>
+            <div class="stats">
+              <div>
+                <h3>12+</h3>
+                <p>Active projects</p>
+              </div>
+              <div>
+                <h3>5</h3>
+                <p>Core research tracks</p>
+              </div>
+              <div>
+                <h3>28</h3>
+                <p>Lab collaborators</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero__panel">
+            <div class="panel">
+              <h3>Lab at a glance</h3>
+              <ul>
+                <li>Living tissue interfaces</li>
+                <li>Signal-aware biomaterials</li>
+                <li>Automated microscopy</li>
+                <li>Open-source bioelectric tools</li>
+              </ul>
+            </div>
+            <div class="duck-card">
+              <img src="/assets/duck-1.svg" alt="Cartoon duck" />
+              <div>
+                <strong>Duck of the week</strong>
+                <p>{{ ducks[0]?.fact }}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="mission" class="mission">
+          <div>
+            <h2>Our mission</h2>
+            <p>
+              We design bioelectric circuits that guide cellular decisions and empower regenerative
+              therapies. Our work blends wet lab experimentation with computational pipelines that
+              translate signals into actionable insights.
+            </p>
+          </div>
+          <div class="mission__grid">
+            <div class="card">
+              <h3>Signal sensing</h3>
+              <p>Non-invasive imaging and electrophysiology to map dynamic tissue states.</p>
+            </div>
+            <div class="card">
+              <h3>Adaptive materials</h3>
+              <p>Smart scaffolds that respond to voltage gradients and mechanical cues.</p>
+            </div>
+            <div class="card">
+              <h3>Therapeutic design</h3>
+              <p>Rapid prototyping for translational regenerative applications.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="people" class="people">
+          <div class="section-header">
+            <div>
+              <h2>Meet the people</h2>
+              <p>Search, filter, and connect with the BobLab team.</p>
+            </div>
+            <div class="filters">
+              <input v-model="search" type="text" placeholder="Search by name or focus" />
+              <select v-model="roleFilter">
+                <option value="">All roles</option>
+                <option v-for="role in roles" :key="role" :value="role">{{ role }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="people__grid">
+            <article v-for="person in filteredPeople" :key="person.email" class="person">
+              <img :src="person.image" :alt="person.name" />
+              <div>
+                <h3>{{ person.name }}</h3>
+                <p class="person__role">{{ person.role }}</p>
+                <p class="person__focus">{{ person.focus }}</p>
+                <a :href="`mailto:${person.email}`">{{ person.email }}</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="updates" class="updates">
+          <div class="section-header">
+            <div>
+              <h2>What’s new</h2>
+              <p>Fresh highlights from the lab.</p>
+            </div>
+            <div class="duck-badge">
+              <img src="/assets/duck-2.svg" alt="Duck badge" />
+              <span>Powered by quacks</span>
+            </div>
+          </div>
+          <div class="updates__grid">
+            <article v-for="update in updates" :key="update.title" class="update">
+              <span class="tag">{{ update.tag }}</span>
+              <h3>{{ update.title }}</h3>
+              <p>{{ update.description }}</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="duck-gallery">
+          <div>
+            <h2>Duck gallery</h2>
+            <p>For comic relief and enhanced lab morale.</p>
+          </div>
+          <div class="duck-gallery__grid">
+            <article v-for="duck in ducks" :key="duck.name" class="duck">
+              <img :src="duck.image" :alt="duck.name" />
+              <div>
+                <h3>{{ duck.name }}</h3>
+                <p>{{ duck.fact }}</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="contact">
+          <div>
+            <h2>Connect with BobLab</h2>
+            <p>
+              We welcome collaborations, lab rotations, and media inquiries. Send a note and our
+              team will respond quickly.
+            </p>
+          </div>
+          <form class="contact__form">
+            <label>
+              Name
+              <input type="text" placeholder="Your name" />
+            </label>
+            <label>
+              Email
+              <input type="email" placeholder="your@email.com" />
+            </label>
+            <label>
+              Message
+              <textarea rows="4" placeholder="Tell us about your idea"></textarea>
+            </label>
+            <button class="primary" type="button">Send message</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <img src="/assets/boblab-logo.svg" alt="BobLab logo" />
+          <p>Bioelectric & regenerative systems laboratory.</p>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <p>123 Innovation Drive<br />Boston, MA</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>hello@boblab.info</p>
+          <p>@boblab</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="6" width="36" height="36" rx="12" fill="#0B3D52"/>
+  <path d="M20 14C25 14 29 18 29 23C29 28 25 32 20 32C15 32 11 28 11 23C11 18 15 14 20 14Z" fill="#F2C94C"/>
+  <path d="M27 22L35 18L36 20L29 26L27 22Z" fill="#E76F51"/>
+  <text x="48" y="30" font-family="'Segoe UI', 'Inter', sans-serif" font-size="22" font-weight="700" fill="#0B3D52">BobLab</text>
+</svg>

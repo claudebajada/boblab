@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Dr. Maya Chen",
+    "role": "Lab Director",
+    "focus": "Bioelectric interfaces & regenerative circuits",
+    "email": "maya.chen@boblab.info",
+    "image": "/assets/person-maya.svg"
+  },
+  {
+    "name": "Luis Ortega",
+    "role": "Senior Research Scientist",
+    "focus": "Organ-on-chip prototyping",
+    "email": "luis.ortega@boblab.info",
+    "image": "/assets/person-luis.svg"
+  },
+  {
+    "name": "Priya Nandakumar",
+    "role": "Postdoctoral Fellow",
+    "focus": "Neural signal decoding",
+    "email": "priya.nandakumar@boblab.info",
+    "image": "/assets/person-priya.svg"
+  },
+  {
+    "name": "Jordan Lee",
+    "role": "PhD Candidate",
+    "focus": "Soft robotics for bio-assembly",
+    "email": "jordan.lee@boblab.info",
+    "image": "/assets/person-jordan.svg"
+  },
+  {
+    "name": "Samira Gupta",
+    "role": "Research Engineer",
+    "focus": "Microscopy automation",
+    "email": "samira.gupta@boblab.info",
+    "image": "/assets/person-samira.svg"
+  },
+  {
+    "name": "Diego Alvarez",
+    "role": "Lab Manager",
+    "focus": "Lab operations & training",
+    "email": "diego.alvarez@boblab.info",
+    "image": "/assets/person-diego.svg"
+  }
+]

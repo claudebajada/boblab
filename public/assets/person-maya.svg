@@ -1,0 +1,7 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="160" height="160" rx="32" fill="#F2F7FA"/>
+  <circle cx="80" cy="64" r="36" fill="#2A9D8F" opacity="0.9"/>
+  <rect x="34" y="94" width="92" height="44" rx="22" fill="#2A9D8F"/>
+  <text x="80" y="74" text-anchor="middle" font-family="'Segoe UI', 'Inter', sans-serif" font-size="26" font-weight="700" fill="#ffffff">MC</text>
+  <text x="80" y="125" text-anchor="middle" font-family="'Segoe UI', 'Inter', sans-serif" font-size="14" font-weight="600" fill="#ffffff">BobLab</text>
+</svg>
